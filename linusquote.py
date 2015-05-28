@@ -1,7 +1,8 @@
-/usr/bin/python3
+#!/usr/bin/python3
 
 import random
 
-quoteList = []
-index = random.randint(0,quoteList.length())
-print(quoteList[index])
+lines = open("quotes").readlines()
+line  = random.choice(lines)[:-1:]
+print (line)
+#print (random.choice(open("quotes").readlines())
