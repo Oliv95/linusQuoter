@@ -1,2 +1,2 @@
 # linusQuoter
-* Much like the program fortune but with quotes from Linus Torvald
+* Much like the program fortune but with quotes from Linus Torvalds
