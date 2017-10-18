@@ -18,8 +18,6 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 import random
-import os 
+import os
 
-lines = open(os.path.dirname(os.path.realpath(__file__)) + "/quotes").readlines()
-line  = random.choice(lines)[:-1:]
-print(line)
+print(random.choice(open(os.path.dirname(os.path.realpath(__file__)) + "/quotes").readlines())[:-1:])
