@@ -1,0 +1,25 @@
+html {
+
+}
+h1 {
+	text-align: center;
+}
+
+.btn-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-wrapper button {
+	padding: 10px;
+}
+
+.quote-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+p {
+	width: 80%;
+	text-align: center;
+}

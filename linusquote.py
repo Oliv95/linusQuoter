@@ -19,5 +19,4 @@
 
 import random
 import os
-
 print(random.choice(open(os.path.dirname(os.path.realpath(__file__)) + "/quotes").readlines())[:-1:])

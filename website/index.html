@@ -1,0 +1,37 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title> Linus Quotes </title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1>
+			Quotes from Linus Torvalds
+		</h1>
+		<div class="btn-wrapper">
+			<button onclick="loadRandomQuote()" type="button"> Another quote </button>
+		</div>
+		
+		<div class="quote-wrapper">
+			<p id="quote">
+				Click the button for a linus quote
+			</p>
+		</div>
+		
+	</body>
+
+<html>
+
+<script>
+	function loadRandomQuote() {
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById("quote").innerHTML = JSON.parse(xmlHttp.response).body;
+			}
+		}
+
+		xmlHttp.open('GET', 'https://linusquote.com/quote', true);
+		xmlHttp.send();
+	}
+</script>
