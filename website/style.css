@@ -1,22 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark&family=Patua+One&family=Quicksand:wght@500;600&family=Roboto:wght@500&display=swap');
+
+/* 
+font-family: 'Palanquin Dark', sans-serif;
+font-family: 'Patua One', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+	/* display: flex; */
+	position: relative;
+	/* display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh; */
+}
+
 h1 {
 	text-align: center;
+	font-family: 'Palanquin Dark', sans-serif;
+	font-family: 'Patua One', cursive;
+	font-weight: 400;
+	margin-top: 50px;
+	font-size: 2.3rem;
+}
+
+.content-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-self: center;
+	justify-self: center;
 }
 
 .btn-wrapper {
 	display: flex;
 	justify-content: center;
+	align-self: center;
 }
 
 .btn-wrapper button {
-	padding: 10px;
+	all: unset;
+	padding: 9px 30px;
+	background: #fff;
+	color: #1ECD97;
+	font-size: 1.1rem;
+/* font-family: 'Patua One', cursive; */
+font-family: 'Roboto', sans-serif;
+	text-transform: capitalize;
+	border-radius: 30px;
+	border: 2px solid #1ECD97;
+	transition: .2s ease-in;
+}
+
+.btn-wrapper button:hover {
+	background: #1ECD97;
+	color: #fff;
+	transition: .2s ease-out;
 }
 
 .quote-wrapper {
+	/* position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); */
 	display: flex;
 	justify-content: center;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.5rem;
+	margin-bottom: 2rem	;
+	/* background: lime; */
+
 }
 
 p {
-	width: 80%;
+	width: 100%;
 	text-align: center;
+}
+p::before {
+	content: '“';
+	font-size: 1.8rem;
+	/* font-weight: bold;
+	position: relative;
+	top: 10px;
+	left: -5px; */
+}
+
+p::after {
+	content: '”';
+	font-size: 1.8rem;
+	/* font-size: 2.8rem;
+	font-weight: bold;
+	margin-top: -20px;
+	position: relative;
+	top: 25px;
+	right: -5px; */
+}
+
+@media (min-width: 470px) { 
+	p { 
+		/* background: lime; */
+	}
 }

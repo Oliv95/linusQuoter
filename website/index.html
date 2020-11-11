@@ -6,28 +6,33 @@
 	</head>
 	<body>
 		<h1>
-			Quotes from Linus Torvalds
+			Quotes from<br>Linus Torvalds
 		</h1>
-		<div class="btn-wrapper">
-			<button onclick="loadRandomQuote()" type="button"> Another quote </button>
-		</div>
 		
-		<div class="quote-wrapper">
-			<p id="quote">
-				Click the button for a linus quote
-			</p>
-		</div>
+		<div class="content-wrapper">
 		
+			<div class="quote-wrapper">
+				<p id="quote">
+					Click the button for a linus quote
+				</p>
+			</div>
+			
+			<div class="btn-wrapper">
+				<button onclick="loadRandomQuote()" id="button" type="button"> Show Quote </button>
+			</div>
+
+		</div>
 	</body>
 
 <html>
 
 <script>
 	function loadRandomQuote() {
+		document.getElementById("button").innerHTML = 'Another Quote'
 		var xmlHttp = new XMLHttpRequest();
 		xmlHttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
-				document.getElementById("quote").innerHTML = JSON.parse(xmlHttp.response).body;
+				document.getElementById("quote").innerHTML = JSON.parse(xmlHttp.response).body.slice(1, -1);
 			}
 		}
 
