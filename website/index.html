@@ -1,37 +1,46 @@
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title> Linus Quotes </title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<h1>
-			Quotes from Linus Torvalds
-		</h1>
-		<div class="btn-wrapper">
-			<button onclick="loadRandomQuote()" type="button"> Another quote </button>
-		</div>
-		
+<head>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#1ECD97">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linus Quotes</title>
+	<link rel="stylesheet" type="text/css" href="style.min.css">
+</head>
+
+<body>
+    <h1>
+		Quotes from<br>Linus Torvalds
+	</h1>
+
+	<div class="content-wrapper">
+
 		<div class="quote-wrapper">
 			<p id="quote">
-				Click the button for a linus quote
+				Click the button for a Linus quote
 			</p>
 		</div>
-		
-	</body>
 
-<html>
+		<div class="btn-wrapper">
+			<button onclick="loadRandomQuote()" id="button" type="button"> Show Quote </button>
+		</div>
 
-<script>
-	function loadRandomQuote() {
-		var xmlHttp = new XMLHttpRequest();
-		xmlHttp.onreadystatechange = function() {
-			if (this.readyState == 4 && this.status == 200) {
-				document.getElementById("quote").innerHTML = JSON.parse(xmlHttp.response).body;
-			}
-		}
-
-		xmlHttp.open('GET', 'https://linusquote.com/quote', true);
-		xmlHttp.send();
-	}
-</script>
+    </div>
+    
+    <script>
+        function loadRandomQuote() {
+            document.getElementById("button").innerHTML = 'Another Quote'
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("quote").innerHTML = JSON.parse(xmlHttp.response).body.slice(1, -1);
+                }
+            }
+    
+            xmlHttp.open('GET', 'https://linusquote.com/quote', true);
+            xmlHttp.send();
+        }
+    </script>
+</body>
+</html>
