@@ -1,121 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Quicksand:wght@500&display=swap');
-
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Patua+One|Quicksand:500&display=swap);
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-:root {
-	--primary-clr: #197278;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	position: relative;
-	font-family: sans-serif;
-	color: #fff;
-	background: radial-gradient(#444, #222);
+  height: 100vh;
+  position: relative;
+  font-family: sans-serif;
+  color: #fff;
+  background: radial-gradient(#444, #222);
 }
 
-/* TITLE */
-
 h1 {
-	text-align: center;
-	font-family: 'Patua One', sans-serif;
-	font-weight: 400;
-	margin-top: 50px;
-	font-size: 2.7rem;
+  text-align: center;
+  font-family: "Patua One", sans-serif, sans-serif;
+  font-weight: 400;
+  padding-top: 50px;
+  font-size: 2.7rem;
 }
 
 .content-wrapper {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: calc(50% + 43px);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /* QUOTE */
-
 .quote-wrapper {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 2rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 2rem;
 }
 
 p {
-	font-family: 'Quicksand', sans-serif;
-	font-size: 1.7rem;
-	width: 100%;
-	text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.7rem;
+  width: 100%;
+  text-align: center;
 }
 
 p::before {
-	content: '“';
-	font-size: 1.8rem;
+  content: '“';
+  font-size: 1.8rem;
 }
 
 p::after {
-	content: '”';
-	font-size: 1.8rem;
+  content: '”';
+  font-size: 1.8rem;
 }
 
 /* BUTTON */
-
 .btn-wrapper {
-	display: flex;
-	justify-content: center;
-	align-self: center;
-	margin: 3rem 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: 3rem 0;
 }
 
 .btn-wrapper button {
-	all: unset;
-	padding: 9px 30px;
-	background: var(--primary-clr);
-	color: #fff;
-	font-size: 1.1rem;
-	font-family: 'Quicksand', sans-serif;
-	border-radius: 30px;
-	border: 2px solid var(--primary-clr);
-	transition: .2s ease-in;
-	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+  all: unset;
+  padding: 9px 30px;
+  background: #197278;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 30px;
+  border: 2px solid #197278;
+  transition: .2s ease-in;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .btn-wrapper button:hover {
-	background: var(--primary-clr);
-	color: #fff;
-	transition: .2s ease-out;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-	transform: translateY(-3px);
+  background: #197278;
+  color: #fff;
+  transition: .2s ease-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
 }
 
 .btn-wrapper button:active {
-	transform: translateY(-1px);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* FOR MOBILE LAYOUTS */
-
 @media (max-width: 470px) {
-	body {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		overflow-x: hidden;
-	}
-
-	h1 {
-		margin-bottom: 60px;
-	}
-
-	.content-wrapper {
-		position: relative;
-		top: 0;
-		left: 0;
-		transform: initial;
-		padding: 0 2rem;
-	}
-	p {
-		font-size: 1.5rem;
-	}
+  body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+    overflow-x: hidden;
+  }
+  h1 {
+    margin-bottom: 60px;
+  }
+  .content-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transform: initial;
+            transform: initial;
+    padding: 0 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
 }
